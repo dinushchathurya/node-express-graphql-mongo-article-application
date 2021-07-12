@@ -4,5 +4,8 @@
   "main": "app.js",
   "repository": "https://github.com/dinushchathurya/node-express-graphql-mongo-article-application.git",
   "author": "dinushchathurya <dinushchathurya21@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
