@@ -7,4 +7,9 @@ module.exports = buildSchema (`
         body: String!
         createdAt: String!
     }
+
+    input ArticleInput {
+        title: String!
+        bosy: String!
+    }
 `)
