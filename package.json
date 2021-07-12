@@ -6,6 +6,10 @@
   "author": "dinushchathurya <dinushchathurya21@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
