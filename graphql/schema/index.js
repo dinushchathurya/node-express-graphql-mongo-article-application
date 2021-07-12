@@ -16,5 +16,8 @@ module.exports = buildSchema (`
     type Query {
         articles:[Article!]
     }
-    
+
+    type Mutation {
+        createArticle(article:ArticleInput): Article
+    }
 `)
