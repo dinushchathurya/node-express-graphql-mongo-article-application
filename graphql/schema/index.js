@@ -20,4 +20,10 @@ module.exports = buildSchema (`
     type Mutation {
         createArticle(article:ArticleInput): Article
     }
+
+    schema {
+        query: Query
+        mutation: Mutation
+    }
+    
 `)
