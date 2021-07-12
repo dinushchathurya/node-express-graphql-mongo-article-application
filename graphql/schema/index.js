@@ -12,4 +12,9 @@ module.exports = buildSchema (`
         title: String!
         bosy: String!
     }
+
+    type Query {
+        articles:[Article!]
+    }
+    
 `)
