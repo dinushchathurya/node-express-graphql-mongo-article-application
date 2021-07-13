@@ -14,5 +14,23 @@ module.exports ={
         } catch (error) {
             throw error
         }
+    },
+
+    createArticle : async args => {
+        try {
+            const { title, body } = await article.save();
+            const  article = new Article({
+                title,
+                body,
+            });
+
+            const newArticle = await article.save();
+            return {
+                ...newArticle._doc,
+                _id: newArticle.id
+            }
+        } catch (error){
+            throw error
+        }
     }
 }
