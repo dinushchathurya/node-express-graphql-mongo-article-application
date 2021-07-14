@@ -1,10 +1,11 @@
 const Article = require('../../models/article')
 
 module.exports ={
+
     articles: async () => {
         try {
-            const articleFetched = await Article.find()
-            return articleFetched.map(article => {
+            const articlesFetched = await Article.find()
+            return articlesFetched.map(article => {
                 return {
                     ...article._doc,
                     _id: article.id,
@@ -16,21 +17,21 @@ module.exports ={
         }
     },
 
-    createArticle : async args => {
+    createArticle: async args => {
         try {
-            const { title, body } = await article.save();
-            const  article = new Article({
+            const { title, body } = args.article
+            const article = new Article({
                 title,
                 body,
-            });
-
-            const newArticle = await article.save();
-            return {
-                ...newArticle._doc,
-                _id: newArticle.id
+            })
+            const newArticle = await article.save()
+            return { 
+                ...newArticle._doc, 
+                _id: newArticle.id 
             }
-        } catch (error){
+        } catch (error) {
             throw error
         }
-    }
+    },
+
 }
