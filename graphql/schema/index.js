@@ -2,7 +2,7 @@ const { buildSchema } = require('graphql');
 
 module.exports = buildSchema (`
     type Article {
-        _id : ID!
+        _id: ID!
         title: String!
         body: String!
         createdAt: String!
@@ -10,7 +10,7 @@ module.exports = buildSchema (`
 
     input ArticleInput {
         title: String!
-        bosy: String!
+        body: String!
     }
 
     type Query {
